@@ -240,3 +240,187 @@ if let unwrapped = convertedNum {
 
 
 
+//: ## For Loops
+//:
+//: For loops are a way to repeat a set of statements a certain number of times.
+//: The traditional 'C-style' loop does not exists in Swift anymore ie. for ( int i = 0; i<10; i++ )
+//: Instead, you create for loops that perform your set of statements for each item in a range or collection
+
+// This is our collection
+let pets = ["dog", "cat", "pig", "parrot"]
+
+// This is the for loop grabbing each item and performing actions
+for pet in pets {
+    print(pet)
+}
+
+// We can declare a for loop using a range with a lower bound and upper bound
+// Example: 2...5 or 2..<5
+for i in 2...5 {
+    print("My Current Index: \(i)")
+}
+
+//: ### Challenge 12
+//: Use a ranged for loop to search throuhg the 'pets' array above for the word 'pig' and print out its index
+
+
+
+//: ## Functions and Closures
+//:
+//: A function is a set of statements grouped together to perform a task. Functions can take in zero or many parameters and the function can also return a value or return nothing.
+
+// Structure: Declare 'func' keyword, name of the function 'sayHello', open and close parentheses, open and close braces
+// This function does not take any parameters and does not return any values
+func sayHello(){
+    print("Hello")
+}
+
+// Structure: Declare 'func' keyword, name of the function 'sayHello', a parameter called 'toPerson' of type String, open and close braces
+// This function takes in a single parameter and does not return any values
+func sayHello(toPerson: String){
+    print("Hello \(toPerson)")
+}
+
+// Structure: Declare 'func' keyword, name of the function 'sayHello', a parameter called 'toPerson' of type String, returns a value of type String, open and close braces
+// This function takes in a single parameter and returns a value of type String
+func sayHello(toPerson: String) -> String{
+     return "Hello \(toPerson)"
+}
+
+
+//: Closures are also a set of statements grouped together but the closure can be stored and passed around.
+
+// This is storing a closure into a variable called 'sayHelloClosure'.
+// The first '()' indicates it takes no parameters, the second '()' indicates it does not return any value, the 'in' keyword separates the type delcaration from the body
+var sayHelloClosure = { () -> () in
+    print("Hello from closure")
+}
+
+// Try it here!
+//sayHelloClosure()
+
+
+// This is storing a closure into a variable called 'sayHelloClosure'.
+// The first '()' indicates it takes one parameter 'name', the second '()' indicates it does not return any value, the 'in' keyword separates the type delcaration from the body
+var sayHelloClosureToPerson = { (name: String) -> () in
+    print("Hello \(name)")
+}
+
+// Try it here!
+//sayHelloClosureToPerson("Bob")
+
+
+// This is storing a closure into a variable called 'sayHelloClosureWithReturn'.
+// The first '()' indicates it takes one parameter 'name', the 'String' after the arrow indicates it returns a String type, the 'in' keyword separates the type delcaration from the body
+var sayHelloClosureWithReturn = { (name: String) -> String in
+    return "Hello \(name)"
+}
+
+// Try it here!
+//sayHelloClosureWithReturn("Bob")
+
+
+//: ### Challenge 13
+//: Create four separate functions to add, subtract, multiple, and divide with two parameters given to it and returns a number result.
+//: Try testing each one afterwards.
+
+
+
+//: ### Challenge 14
+//: Create a closure that takes in a 'name' parameter and prints it
+//: Then, create a function that takes a 'name' parameter and a closure parameter. This function's only purpose is to use its 'name' parameter and pass it to the given closure parameter.
+// Test your function by passing in your created closure as a parameter.
+
+
+
+
+//: ## Class and Struct
+//:
+//: The concept of a class is just like what you've learned about a class in Objective-C. Structs are similar but they cannot be subclasses and any instance of them are passed by value NOT by reference.
+
+//: The Shape class and Shape struct look very similar with a few expections as mentioned in the lecture slides.
+class ShapeClass {
+    var numberOfSides = 0
+    func description() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+struct ShapeStruct {
+    var numberOfSides = 0
+    func description() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+
+//: ### Challenge 13
+//: - Create a class for Car. Add a String property called model.
+//: - Create a function called drive. Inside the function include a print statement that prints the model of the car you are driving.
+//: - Create a custom initalizer that requires an String model as an input.
+//: - Subclass Car and make a Toyota Class. Override init() and set the model to "Prius" inside the method.
+
+//: To Test:
+//: - Add an instance of a Car called nissan. Initialize it with model named "Rogue"
+//: - Add the drive() method to make sure it prints out "Rogue"
+//: - Add an instance of Toyota called toyota. Initialize it.
+//: - Add the drive() method to make sure it prints out "Prius"
+
+
+
+//: ### Challenge 14
+//: Earlier, we mentioned that classes are passed by reference and structs are passed by value. Let's try to clarify this with an example.
+//: First, create a Person class with a name property and a custom initializer that takes a name as its parameter, then uncomment 'Section A'. What do think will happen? What are the results?
+//: Now create the same Person class but convert it to a struct. Uncomment 'Section B'. What do think will happen? What are the results?
+
+// Implement Person class under here!
+
+
+// Section A
+//var firstPersonObject = Person(name: "Joe")
+//var secondPersonObject = firstPersonObject
+//secondPersonObject.name = "Jane"
+//
+//print(firstPersonObject.name)
+//print(secondPersonObject.name)
+
+
+// Implement Person struct under here!
+
+
+// Section B
+//var firstPersonStruct = Person(name: "Joe")
+//var secondPersonStruct = firstPersonStruct
+//secondPersonStruct.name = "Jane"
+//
+//print(firstPersonStruct.name)
+//print(secondPersonStruct.name)
+
+
+//: ### Tuples
+//: Tuples are a type that can store multiple values into a group. You can also name each of values if you choose to.
+
+// This is a tuple with a person's first name, last name and age.
+var personTuple = ("Bob", "Smith", 23)
+
+// We can access each value using their index
+personTuple.0
+personTuple.1
+personTuple.2
+
+// We can also consider naming each value for clarity
+var namedPersonTuple = (firstName: "Jane", lastName: "Smith", age: 23)
+
+// This way, we can also access the values using their name
+namedPersonTuple.firstName
+namedPersonTuple.lastName
+namedPersonTuple.age
+
+
+//: ### Challenge 15
+//: Create a function that takes three parameters, a name of type String, an age of type Int, and eligable of type Bool.
+//: The function returns a tuple of the name and age if eligable is true, otherwise, it will return nil.
+//: To test: call your new function with eligable true and false, and print the two values
+//: (Hint: Use optional return value and conditional unwrapping)
+
+
