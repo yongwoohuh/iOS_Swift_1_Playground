@@ -45,11 +45,11 @@ var convertedNum = Double(numberString) //convert numberString to a Double
 
 //: The next way to deal with optionals is called "Conditional unwrapping" or sometimes casually called an "if-let". It's **much** safer, and won't break your Playground.
 //:
-//: The code below uses a conditional unwrap on `convertedNum`. This creates a new variable "unwrapped", but only if `convertedNum` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is an `Double` not an `Double?`
+//: The code below uses a conditional unwrap on `convertedNum`. This creates a new variable "unwrapped", but only if `convertedNum` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is a `Double` not a `Double?`
 
 if let unwrapped = convertedNum {
     // unwrapped exists in this block, and is number unwrapped.
-    print("\(unwrapped) is an Double and no longer an Double?")
+    print("\(unwrapped) is a Double and no longer a Double?")
 }else{
     // unwrapped doesn't exist in this block.
     print("convertedNum did not unwrap")

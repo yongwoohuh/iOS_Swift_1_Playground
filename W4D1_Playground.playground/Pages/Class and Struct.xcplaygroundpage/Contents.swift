@@ -20,7 +20,7 @@ struct ShapeStruct {
 }
 
 
-//: ### Challenge 13
+//: ### Challenge 15
 //: - Create a class for Car. Add a String property called model.
 //: - Create a function called drive. Inside the function include a print statement that prints the model of the car you are driving.
 //: - Create a custom initalizer that requires an String model as an input.
@@ -34,7 +34,7 @@ struct ShapeStruct {
 
 
 
-//: ### Challenge 14
+//: ### Challenge 16
 //: Earlier, we mentioned that classes are passed by reference and structs are passed by value. Let's try to clarify this with an example.
 //: First, create a Person class with a name property and a custom initializer that takes a name as its parameter, then uncomment 'Section A'. What do think will happen? What are the results?
 //: Now create the same Person class but convert it to a struct. Uncomment 'Section B'. What do think will happen? What are the results?

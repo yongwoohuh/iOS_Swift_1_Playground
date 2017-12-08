@@ -23,13 +23,13 @@ myDictionary["Principal"] = 1
 var mySecondDictionary = [Int : Double]()
 
 
-//: ### Challenge 7
+//: ### Challenge 9
 //: Declare a mutable array that is empty and holds Strings. On the next few lines, add the following names to the array: John, Karen, Jane
 //: Finally, print out each person's name from the array using their index and string interpolation
 
 
 
-//: ### Challenge 8
+//: ### Challenge 10
 //: Declare a mutable dictionary with the following names and their salaries
 //: John - $50000
 //: Jane - $70000

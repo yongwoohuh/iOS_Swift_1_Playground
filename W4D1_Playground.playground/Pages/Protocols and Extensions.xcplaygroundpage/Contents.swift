@@ -16,7 +16,7 @@ class Triangle: ShapeProtocol {
 }
 
 
-//: ### Challnge 17
+//: ### Challnge 19
 //: Define a person protocol with name, gender, age and add a custom initializer to set all the properties and a function to print a description of this person.
 //: Create a 'Student' class that conforms to this protocol and print the description of this student using its name.
 
@@ -51,7 +51,7 @@ var myDoubleValue = 5.0
 var mySquaredDoubleValue = myDoubleValue.square()
 
 
-//: ### Challnge 18
+//: ### Challnge 20
 //: We are going to add a few extensions to several classes that you could potentially use for your future projects to make things more convenient.
 //: 1. Create an extension on UIColor that converts hex represented colours to a UIColor to use. ex: #FFFFFF would give a UIColor of white (Hint: You can google the algorithm on how to convert hex values to a UIColor)
 //: 2. Create an extension on String called 'contains'. It returns true if the provided parameter string is contained within the searchable string, otherwise it will return false.

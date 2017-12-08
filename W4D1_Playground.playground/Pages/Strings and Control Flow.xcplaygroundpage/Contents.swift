@@ -47,12 +47,12 @@ default:
 }
 
 
-//: ### Challenge 9
+//: ### Challenge 7
 //: Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
 
 
-//: ### Challenge 10
-//: Rewrite the above Challenge 9 as a switch statement
+//: ### Challenge 8
+//: Rewrite the above Challenge 7 as a switch statement
 
 
 

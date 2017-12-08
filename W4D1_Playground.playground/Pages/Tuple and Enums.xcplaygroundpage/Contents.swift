@@ -20,7 +20,7 @@ namedPersonTuple.lastName
 namedPersonTuple.age
 
 
-//: ### Challenge 15
+//: ### Challenge 17
 //: Create a function that takes three parameters, a name of type String, an age of type Int, and eligable of type Bool.
 //: The function returns a tuple of the name and age if eligable is true, otherwise, it will return nil.
 //: To test: call your new function with eligable true and false, and print the two values
@@ -43,7 +43,7 @@ let januaryMonth = Months.January
 let marchMonth = Months.March
 
 
-//: ### Challnge 16
+//: ### Challnge 18
 //: Create enums for the game "Rock, Paper, Scissors". Then create a function within the enum that determines which handshape beats what.
 //: ie: If I invoke "HandShape.rock.whatBeatsMe()", this will print "Paper"
 
