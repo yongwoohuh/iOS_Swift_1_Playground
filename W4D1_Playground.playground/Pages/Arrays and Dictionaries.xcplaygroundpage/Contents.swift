@@ -1,8 +1,10 @@
 //: [Previous](@previous)
 
-//: ## Array and Dictionaries
-//:
-//: Swift array and dictionaries behave very similarly to what you've seen in Objective-C so far. The syntax on how they are declared may look different.
+/*:
+ ## Array and Dictionaries
+ 
+ Swift array and dictionaries behave very similarly to what you've seen in Objective-C so far. The syntax on how they are declared may look different.
+ */
 
 // We can declare an array with square brackets syntax
 var myNumberArray = [1,2,3]
@@ -23,19 +25,26 @@ myDictionary["Principal"] = 1
 var mySecondDictionary = [Int : Double]()
 
 
-//: ### Challenge 9
-//: Declare a mutable array that is empty and holds Strings. On the next few lines, add the following names to the array: John, Karen, Jane
-//: Finally, print out each person's name from the array using their index and string interpolation
+/*:
+ - Callout(Challenge):
+    Declare a mutable array that is empty and holds Strings. On the next few lines, add the following names to the array: John, Karen, Jane
+ 
+    Finally, print out each person's name from the array using their index and string interpolation
+*/
 
 
-
-//: ### Challenge 10
-//: Declare a mutable dictionary with the following names and their salaries
-//: John - $50000
-//: Jane - $70000
-//: Karen - $62000
-//:
-//: On the next line, add this last person's info: Bob - $45000
+/*:
+ - Callout(Challenge):
+  Declare a mutable dictionary with the following names and their salaries
+ 
+    John - $50000
+ 
+    Jane - $70000
+ 
+    Karen - $62000
+ 
+    On the next line, add this last person's info: Bob - $45000
+ */
 
 
 //: [Next](@next)

@@ -1,25 +1,41 @@
 //: [Previous](@previous)
 
-//: ## String Interpolation
-//:
-//: String interpolation is combining variables and constants inside a string.
-//: We can start by declaring a name and we print out a sentence with the variable.
+/*:
+ ## String Interpolation
+
+ String interpolation is combining variables and constants inside a string.
+ We can start by declaring a name and we print out a sentence with the variable.
+*/
 
 var name = "Joe Smith"
 print("Your name is \(name)")
 
-//: The sentence is printed as one string because string interpolation combined it for us.
+/*:
+ The sentence is printed as one string because string interpolation combined it for us.
+ */
 
-//: ### Challenge 6
-//: Declare three variables about a person with their name, age and height. Then print out a sentence describing the person with the three variables. Ex: Your name is Joe Smith, you age is 35, and your height is 175cm.
+/*:
+ - Experiment:
+ Declare three variables about a person with their name, age and height. Then print out a sentence describing the person with the three variables.
+ */
+/*:
+ - Example:
+ "Your name is Joe Smith, you age is 35, and your height is 175cm."
+ */
 
 
 
-//: ## Control Flow
-//:
-//: Control flow are code structures that run certain code based on a condition. You've already seen this in Objective-C, if and switch statements. The syntax is very similar except for the omission of the parenthesis around the condition
-//:
-//: The following if statement showcases multiple conditions to check. Try changing the value of 'limit' and see the results
+/*:
+ ## Control Flow
+
+ Control flow are code structures that run certain code based on a condition. You've already seen this in Objective-C, if and switch statements. The syntax is very similar except for the omission of the parenthesis around the condition.
+ 
+ The following if statement showcases multiple conditions to check.
+
+ - Experiment:
+  Try changing the value of 'limit' and see the results.
+ */
+
 let limit = 102
 
 if limit > 100 {
@@ -32,7 +48,13 @@ else{
     print("This number is way below my limit")
 }
 
-//: The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you. Try changing the 'vegetable' variable to test the conditions and figure out how they work
+/*:
+ The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you.
+ 
+ - Experiment:
+ Try changing the 'vegetable' variable to test the conditions and figure out how they work.
+ */
+
 let vegetable = "red pepper"
 var vegetableComment = ""
 switch vegetable {
@@ -47,12 +69,16 @@ default:
 }
 
 
-//: ### Challenge 7
-//: Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
+/*:
+ - Callout(Challenge):
+ Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
+ */
 
 
-//: ### Challenge 8
-//: Rewrite the above Challenge 7 as a switch statement
+/*:
+ - Callout(Challenge):
+ Rewrite the above Challenge 7 as a switch statement
+ */
 
 
 
