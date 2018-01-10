@@ -4,7 +4,8 @@
  ## String Interpolation
 
  String interpolation is combining variables and constants inside a string.
- We can start by declaring a name and we print out a sentence with the variable.
+ We can do this by writing the value in parentheses and write a backslash (`\`) before the parentheses.
+ For example:
 */
 
 var name = "Joe Smith"
@@ -24,34 +25,35 @@ print("Your name is \(name)")
  */
 
 
+/*:
+ - Experiment:
+ Math calculations can be included within the `\()` such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
+ */
+
 
 /*:
  ## Control Flow
 
- Control flow are code structures that run certain code based on a condition. You've already seen this in Objective-C, if and switch statements. The syntax is very similar except for the omission of the parenthesis around the condition.
- 
- The following if statement showcases multiple conditions to check.
+ Use 'if' and 'switch' to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
+*/
 
- - Experiment:
-  Try changing the value of 'limit' and see the results.
- */
-
-let limit = 102
-
-if limit > 100 {
-    print("This number is beyond my limit")
-}
-else if limit > 50 {
-    print("This number is an acceptable limit")
+let myConditional = true
+if myConditional {
+    print("It's true!")
 }
 else{
-    print("This number is way below my limit")
+    print("It's false!")
 }
 
 /*:
- The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you.
- 
  - Experiment:
+  Try creating your own 'if' statement that determines whether a given number is even, odd or zero.
+ */
+
+
+/*:
+ - Experiment:
+ The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you.
  Try changing the 'vegetable' variable to test the conditions and figure out how they work.
  */
 
@@ -77,9 +79,17 @@ default:
 
 /*:
  - Callout(Challenge):
- Rewrite the above Challenge 7 as a switch statement
+ Rewrite the above Challenge as a switch statement
  */
 
 
+/*:
+ - Callout(Challenge):
+ Write a conditional 'if' statement to determine whether a given year is considered a leap year or not.
+ Here are the rules to determine leap year:
+ - The year can be evenly divided by 4 = Is Leap Year
+ - If the year can be evenly divided by 100 = Is NOT a Leap Year, unless;
+ - The year is also evenly divisible by 400 = Is Leap Year
+ */
 
 //: [Next](@next)
