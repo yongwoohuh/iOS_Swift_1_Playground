@@ -3,17 +3,12 @@
 /*:
  ## Array and Dictionaries
  
- Swift array and dictionaries behave very similarly to what you've seen in Objective-C so far. The syntax on how they are declared may look different.
+  Arrays and dictionaries allow us to store a collection of data. Create arrays and dictionaries using brackets '[]'. Remember that arrays hold a collection data based on an index, so we can access a value by writing the desired index within the brackets. With dictionaries, they hold a key and a value, and we can access a value by writing the desired key within the brackets.
  */
 
 // We can declare an array with square brackets syntax
 var myNumberArray = [1,2,3]
-
-// We are also able to append to the array (assuming it is mutable)
-myNumberArray.append(4)
-
-// We can also declare empty arrays with a type they hold and add objects to them later
-var myEmptyArray = [Int]()
+print("The value at index 1 is: \(myNumberArray[1])")
 
 // We can declare a dictionary with square brackets and key/value data
 var myDictionary = ["Students" : 5, "Teachers" : 2]
@@ -21,8 +16,43 @@ var myDictionary = ["Students" : 5, "Teachers" : 2]
 // This is how we add a new key/value to our dictionary
 myDictionary["Principal"] = 1
 
-// We can declare empty dictionaries and declare its key/value type
-var mySecondDictionary = [Int : Double]()
+/*:
+ - Experiment:
+ Try creating an array and dictionary using 'let' vs 'var' then try adding something to them. What do you notice? For the array, you can use a function called 'append' to add something to it.
+ */
+
+
+/*:
+ - Experiment:
+ Try creating an empty array with an explicit type. What happens when you add a value that isn't the same type?
+ */
+
+
+/*:
+ - Experiment:
+ Try creating an empty dictionary with an explicit type.
+ */
+
+
+/*:
+ - Experiment:
+ Create an array with any values of your choice. Play around with accessing a value at a certain index. Then try playing with the following functions of an array and find out what they do:
+ - append
+ - insert
+ - removeAt
+ - removeAll
+ - reverse
+ - count
+ */
+
+
+/*:
+ - Experiment:
+ Create a dictionary with any values of your choice. Play around with accessing a value by its key. Try keys using different case sensitivity, what happens? Then try playing with the following functions of a dictionary and find out what they do:
+ - removeValue
+ - isEmpty
+ - count
+ */
 
 
 /*:
