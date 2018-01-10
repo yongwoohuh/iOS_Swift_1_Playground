@@ -38,7 +38,7 @@ students = 7
  Types are very important in Swift. When you create a variable, that variable has a *type*. This means that the variable can only hold one _type_ of data. If the variable is of _type_ `String`, that means you can't assign a number to it.
  
  - Experiment:
- Hold down the Option key and click on the variables `school` and `students` to see a popup window with information about the variable. If we click on `school`, we can see it's a `String`. What type is `students`?
+ Hold down the Option key and click on the variables `school` and `students` above to see a popup window with information about the variable. If we click on `school`, we can see it's a `String`. What type is `students`?
  */
 
 /*:
@@ -105,8 +105,33 @@ let widthLabel = label + String(width)
 
 /*:
  - Callout(Challenge):
- I can't think of a challenge for this one but I would love to have 1 or more challenges on each page.
+ Let's solve some simple geometric math problems. For each question, make sure you show your work just like how your teachers told you in high school. Show all the variables you are using and give them meaningful names. Hint: You can delcare your own 'pi' using 3.14
  */
 
+/*:
+ - Callout(Formulas):
+ Area of circle = 'pi' * radius^2
+ \
+ Circumference of circle = 2 * 'pi' * radius
+ \
+ Volume of cylinder = 'pi' * radius^2 * height
+ */
+
+/*:
+ - Callout(Problem 1):
+ Find the area of a circle with a radius of 10 metres
+ */
+
+
+/*:
+ - Callout(Problem 2):
+ Find the circumference of a circle with a diameter of 24 metres. Hint: Radius is half the length of the diameter
+ */
+
+
+/*:
+ - Callout(Problem 3):
+ Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
+ */
 
 //: [Next](@next)
