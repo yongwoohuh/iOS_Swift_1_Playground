@@ -28,10 +28,64 @@ for i in 2...5 {
 }
 
 /*:
- - Callout(Challenge):
+ - Experiment:
+ What's difference between `2...5` vs `2..<5`?
+ */
+
+
+/*:
+ - Experiment:
   Use a ranged for loop to search through the 'pets' array above for the word 'pig' and print out its index.
  */
 
 
+/*:
+ - Experiment:
+ Create an array of random numbers of your choosing then make a for loop that adds 1 to each number.
+ */
+
+
+/*:
+ - Experiment:
+ Take a look at the example below. Modify the code so that it searches for both the largest and smallest number. Then print out the result.
+ */
+
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+
+
+/*:
+ - Callout(Challenge):
+ Given a number `N`, from 0 to `N`, add up all the odd numbers and print out the result.
+ ie: N = 5, 1+3+5 = 9
+ */
+
+
+/*:
+ - Callout(Challenge):
+ Given the following array of numbers, determine the frequency of each number using a for loop.
+ 
+ ie: [1, 2, 1, 3, 3, 1, 1, 1]
+ 
+ 1: Occurs 5 times
+ 
+ 2: Occurs 1 time
+ 
+ 3: Occurs 2 times
+ */
+
+let numberArray = [1, 4, 5, 5, 5, 3, 2, 1, 4, 2, 2, 2, 1]
 
 //: [Next](@next)
