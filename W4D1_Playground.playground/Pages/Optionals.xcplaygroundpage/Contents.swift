@@ -5,7 +5,7 @@
 
  Swift introduces the *optional* type which is a 'wrapper' around other types. When you ask it for its value, it can either return `nil` or the value of the type that it's wrapping.
 
- We can declare a variable as optional by adding a '?' in front of it.
+ We can declare a variable as optional by adding a '?' in front of the specified type.
  */
 
 var schoolName: String? = "Lighthouse Labs"
