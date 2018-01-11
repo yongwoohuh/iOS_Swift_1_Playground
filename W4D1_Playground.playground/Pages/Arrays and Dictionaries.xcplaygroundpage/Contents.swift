@@ -18,7 +18,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Try creating an array and dictionary using 'let' vs 'var' then try adding something to them. What do you notice? For the array, you can use a function called 'append' to add something to it.
+ Try creating an array and dictionary using 'let' vs 'var' then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
 
 
@@ -36,7 +36,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Create an array with any values of your choice. Play around with accessing a value at a certain index. Then try playing with the following functions of an array and find out what they do:
+ Create an array with any values of your choice. Play around with accessing a value at a certain index. Then try playing with the following methods of an array and find out what they do:
  - append
  - insert
  - removeAt
@@ -48,7 +48,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Create a dictionary with any values of your choice. Play around with accessing a value by its key. Try keys using different case sensitivity, what happens? Then try playing with the following functions of a dictionary and find out what they do:
+ Create a dictionary with any values of your choice. Play around with accessing a value by its key. Try keys using different case sensitivity, what happens? Then try playing with the following methods of a dictionary and find out what they do:
  - removeValue
  - isEmpty
  - count
