@@ -1,41 +1,66 @@
-//: ### Protocols
-//: Protocols are a defined contract or blueprint that a class, struct or enum must follow.
+//: [Previous](@previous)
 
-// Here we define a 'ShapeProtocol' where anything that conforms to it must provide the number of sides
+import UIKit
+
+/*:
+ ## Protocols
+ Protocols are a defined contract or blueprint that a class, struct or enum must follow.
+ */
+
+/*:
+ Here we define a 'ShapeProtocol' where anything that conforms to it must provide a property of number of sides and a function called 'shapeDescription'
+ */
 protocol ShapeProtocol {
     var numberOfSides: Int { get set }
+    func shapeDescription()
 }
 
-// This 'Triangle' class conforms to the 'ShapeProtocol' and defines the number of sides for this shape
-class Triangle: ShapeProtocol {
+/*:
+ This 'Square' class conforms to the 'ShapeProtocol' and defines the number of sides for this shape and it has the shapeDescription method inside.
+ */
+class Square: ShapeProtocol {
     var numberOfSides: Int
     
     init(){
-        self.numberOfSides = 3
+        self.numberOfSides = 4
+    }
+    
+    func shapeDescription() {
+        
+        print("This is a square")
     }
 }
 
-
-//: ### Challnge 19
-//: Define a person protocol with name, gender, age and add a custom initializer to set all the properties and a function to print a description of this person.
-//: Create a 'Student' class that conforms to this protocol and print the description of this student using its name.
-
-
-// Here we define a 'PersonProtocol'. Anyone who conforms to this protocol must consist of properties and functions defined.
-protocol PersonProtocol {
-    
-    var name: String { get set }
-    var gender: String { get set }
-    var age: Int { get set }
-    
-    init(name: String, gender: String, age: Int)
-    func myPersonDescription()
-}
+/*:
+ - Experiment:
+ Add a new function in our 'ShapeProtocol' that should calculate the area of its shape. Make sure you implement it in our 'Square' class as well.
+ */
 
 
-//: ### Extensions
-//: Extensions are a way to add additional functions to an existing class, struct or enum.
-//: For example, I can extend the 'Double' class to add a function I may use very often such as squaring a number. ie: 4*4 = 16
+/*:
+ - Experiment:
+ Add a new property in our 'ShapeProtocol' of type String that indicates the colour of this shape.
+ */
+
+
+/*:
+ - Experiment:
+ We can also declare a custom initializer within our 'ShapeProtocol' that any class must have present. Create an initializer that takes in a colour as a parameter.
+ */
+
+
+/*:
+ - Callout(Challenge):
+ Define a person protocol with name, gender, age and add a custom initializer to set all the properties and a function to print a description of this person. Create a 'Student' class that conforms to this protocol and print the description of this student using its name.
+ */
+
+
+/*:
+ ## Extensions
+ Extensions are a way to add additional functions to an existing class, struct or enum.
+ \
+ For example, I can extend the 'Double' class to add a function I may use very often such as squaring a number. ie: 4*4 = 16
+ */
 
 // This is declaring an extension on the Double class
 extension Double {
@@ -50,10 +75,32 @@ extension Double {
 var myDoubleValue = 5.0
 var mySquaredDoubleValue = myDoubleValue.square()
 
+/*:
+ - Experiment:
+ Try adding the 'square' function the Float type
+ */
 
-//: ### Challnge 20
-//: We are going to add a few extensions to several classes that you could potentially use for your future projects to make things more convenient.
-//: 1. Create an extension on UIColor that converts hex represented colours to a UIColor to use. ex: #FFFFFF would give a UIColor of white (Hint: You can google the algorithm on how to convert hex values to a UIColor)
-//: 2. Create an extension on String called 'contains'. It returns true if the provided parameter string is contained within the searchable string, otherwise it will return false.
-//: 3. Create an extension on Double to add a function that converts the number of seconds into minutes and another function to hours. ex: Given 900 seconds, the minutes returned will be 15 minutes, and the hours returned would be 0.25 hours.
 
+/*:
+ - Callout(Challenge):
+ We are going to add a few extensions to several classes that you could potentially use for your future projects to make things more convenient.
+ */
+/*:
+ - Callout(Challenge):
+ Create an extension on UIColor that converts hex represented colours to a UIColor to use. ex: #FFFFFF would give a UIColor of white (Hint: You can google the algorithm on how to convert hex values to a UIColor)
+ */
+
+/*:
+ - Callout(Challenge):
+ Create an extension on String called 'trim'. This will return a String that has the whitespace trimmed from the beginning and end. For example: "    hello there  " will return "hello there"
+ */
+
+/*:
+ - Callout(Challenge):
+ Create an extension on String that checks if an email address has a valid format. You can make the rules as strict or as loose as you'd like. Rules can include verifying there are no spaces, there is a '@' present, etc.
+ */
+
+/*:
+ - Callout(Challenge):
+ Create an extension on Double to add a function that converts the number of seconds into minutes and another function to hours. ex: Given 900 seconds, the minutes returned will be 15 minutes, and the hours returned would be 0.25 hours.
+ */
