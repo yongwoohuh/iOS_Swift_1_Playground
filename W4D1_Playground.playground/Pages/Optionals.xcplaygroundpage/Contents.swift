@@ -1,67 +1,151 @@
 //: [Previous](@previous)
 
-//: ## Optionals and nil
-//:
-//: Swift introduces optional type which is a 'wrapper'. When you ask it for its value, it can either return nil or a value of the type you indicated when you created the optional.
-//:
-//: First let's start with a conversion that doesn't require optionals. If we have a Double and an Int, and we want to do math with them, the compiler won't let us. This is because we can't add two different types together.
+/*:
+ ## Optionals and nil
+
+ Swift introduces the *optional* type which is a 'wrapper' around other types. When you ask it for its value, it can either return `nil` or the value of the type that it's wrapping.
+
+ We can declare a variable as optional by adding a '?' in front of the specified type.
+ */
+
+var schoolName: String? = "Lighthouse Labs"
+var numberValue: Int? = 30
+var doubleNumberValue: Double? = nil
+
+/*:
+ - Experiment:
+ Declare a non-optional variable of a String and set it to nil. What happens?
+ */
+
+
+/*:
+ - Experiment:
+ Declare an optional variable of a type String and set an initial String value to it. Then set it to nil on the next line. Does this work? Why or why not?
+ */
+
+
+/*:
+ Let's consider multiplying two numbers together that are of different types. Since we have a Double and an Int, we need to convert the two numbers to the same type. For example, creating a new Double using an Int.
+ */
 
 var ratio: Double = 10.0 // ratio is a Double
 var integerValue: Int = 20 // integerValue is an Int
+// ratio * count // this doesn't work!
 
-// ratio * count // uncomment this line and see what happens - this line does not compile.
+var convertIntegerValue = Double(integerValue) // convert integerValue to a Double
+ratio * convertIntegerValue // now this works!
 
-//: To get around this we can convert between types. For example, creating a new Double using an Int.
 
-var count = 2
-var countDouble = Double(count) // convert count to a Double
+/*:
+ Now let's say I have a String that contains digits and I want to use the numbered value of the String to multiply with another Double.
+ */
 
-ratio * countDouble // now this works!
+/*:
+ - Experiment:
+ Declare a String containing digits and try converting it to a Double the same way shown in the above example. What do you notice about the variable type? Hint: Use 'Option' + Mouse Click on the variable to see the type
+ */
 
-//: With that kind of conversion in mind, let's say we have a string that contains the characters 1 and 0, e.g. "10". That looks like a number, but it's a string that contains a text representation of a number.
-//:
-//: If we want to add 1 to our number-containing-string, we need to convert it to a number. We can do that!
 
-var numberString = "10" // a string containing digits
-var convertedNum = Double(numberString) //convert numberString to a Double
+/*:
+ - Experiment:
+ With your newly converted Double from a String, try multiplying it with the 'ratio' variable. What happens?
+ */
 
-//: Now look at the type of the variable `convertedNum`. It's not actually a `Double` it's a `Double?`. The question mark at the end of the type indicates that this variable is "optional". That means we might have a double or we might have nothing. This is because, unlike converting an Int to a Double, the conversion between a `String` and a `Double` might fail! It could fail because some strings don't make sense as numbers. How would you convert the string "😎" to a `Double`...?
-//:
-//: Ok so that's not too crazy! Things that can fail return optionals, and their type has a question-mark after it, like `Int?`, things that always work give us back non-optionals (e.g. `Int` without a question-mark). Cool!
-//:
-//: So now let's try to add 1 to our `convertedNum` variable.
 
-//convertedNum = convertedNum + 1 // uncomment this line!
+/*:
+ Your newly converted Double value is a `Double?` which indicates we might have a double or we might have nothing.  Converting a String to a Double might fail because the String does not guarantee there will only be digits within it.
+ 
+ Looks like the compiler didn't like our above experiment! It's giving us a cryptic error about applying binary operators and types and things, and offers the suggestion of adding an exclaimation point!
+ 
+  We aren't able to do math with your newly converted `Double?` because Swift doesn't know how to multiply maybe-nothing-maybe-something and `ratio` together.
+ 
+  To use our optional converted Double?, we need to unwrap it. There are a few ways to unwrap variables, and we'll need to know at least two of them.
+ 
+  The first and most dangerous way is by adding an exclaimation point. This is called "force unwrapping". It will make the compiler ignore the optional and use the contents of your converted `Double?`.  So if your converted `Double?` does contain a number, the unwap will succeed.  However, the force-unwrap will crash the Playground if our `Double?` contained something that couldn't be converted to a number.
+*/
 
-//: Looks like the compiler doesn't like that! It's giving us a cryptic error about applying binary operators and types and things, and offers the suggestion of adding an exclaimation point!
-//:
-//: We aren't able to do math with `convertedNum` because while it's easy to say how to add `10` and `1` together, Swift doesn't know how to add maybe-nothing-maybe-10 and `1` together.
-//:
-//: To use our optional Int, we need to unwrap it. There are a few ways to unwrap variables, and we'll need to know at least two of them.
-//:
-//: The first and most dangerous way is by adding an exclaimation point. This is called "force unwrapping". It will make the compiler ignore the optional and use the contents of `convertedNum`.  So if `convertedNum` does contain a number, the unwap will succeed.  However, the force-unwrap will crash the Playground if our `numberString` contained something that couldn't be converted to a number.
+/*:
+ - Example:
+ Force unwrapping is done by adding a '!' to the end of the variable name
+ */
+let myOptionalDouble: Double? = 12.0
+print("\(myOptionalDouble!)")
 
-//print(convertedNum!) // Uncomment this line - Force unwrapping
+/*:
+  - Experiment:
+ Now you try! Try printing out your converted `Double?` with a force unwrap
+*/
 
-//: The next way to deal with optionals is called "Conditional unwrapping" or sometimes casually called an "if-let". It's **much** safer, and won't break your Playground.
-//:
-//: The code below uses a conditional unwrap on `convertedNum`. This creates a new variable "unwrapped", but only if `convertedNum` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is a `Double` not a `Double?`
 
-if let unwrapped = convertedNum {
+
+/*:
+ - Experiment:
+ Go back and change your String to something that has no digits. What happens and why?
+ */
+
+
+
+/*:
+ - Experiment:
+ Declare an optional variable of a type String and set an initial String value to it. Try printing it.
+ Now print it again, but this time unwrap the optional variable using the '!'. What's different about the two lines you printed?
+ */
+
+
+/*:
+ - Experiment:
+ Try setting an optional String variable to a non-optional String variable. What happens? What can you do to prevent the compiler from throwing an error?
+ */
+
+
+/*:
+ The next way to deal with optionals is called "Conditional unwrapping" or sometimes casually called an "if-let". It's **much** safer, and won't break your Playground.
+ 
+  The code below uses a conditional unwrap on `gravityConstant`. This creates a new variable `unwrapped`, but only if `gravityConstant` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is a `Double` not a `Double?`
+*/
+
+let gravityConstant: Double? = 9.8
+
+if let unwrapped = gravityConstant {
     // unwrapped exists in this block, and is number unwrapped.
     print("\(unwrapped) is a Double and no longer a Double?")
-}else{
+} else {
     // unwrapped doesn't exist in this block.
-    print("convertedNum did not unwrap")
+    print("gravityConstant did not unwrap")
 }
 
-//: ### Challenge 11
-//: Put the cars and their price into a dictionary
-//: Mazda3 - $50000
-//: CRV - $60000
-//: Hummer - $100000
-//:
-//: Print out each car's price using conditional unwrapping and string interpolation.
-//: Try printing a car's price using a name that doesn't exist.
+
+/*:
+ - Experiment:
+ Try changing `gravityConstant` to nil. What happens?
+ */
+
+
+/*:
+ - Experiment:
+ Create an array with containing elements of any type of your choice. Try experimenting with the array methods 'first' and 'last' to find out what they do. You'll see that both return optional values. Print out the values of first and last by using conditional unwrapping.
+ */
+
+
+/*:
+ - Experiment:
+ Using the same array, experiment with the array method 'indexOf' and find out what it does. Print out the value using conditional unwrapping.
+ */
+
+
+/*:
+ - Callout(Challenge):
+ 
+    Put the cars and their price into a dictionary
+ 
+    Mazda3 - $50000
+ 
+    CRV - $60000
+ 
+    Hummer - $100000
+ 
+    Print out each car's price using conditional unwrapping and string interpolation.
+    Try printing a car's price using a name that doesn't exist.
+*/
 
 //: [Next](@next)

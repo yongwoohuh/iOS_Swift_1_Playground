@@ -1,38 +1,62 @@
 //: [Previous](@previous)
 
-//: ## String Interpolation
-//:
-//: String interpolation is combining variables and constants inside a string.
-//: We can start by declaring a name and we print out a sentence with the variable.
+/*:
+ ## String Interpolation
+
+ String interpolation is combining variables and constants inside a string.
+ We can do this by writing the value in parentheses and write a backslash (`\`) before the parentheses.
+ For example:
+*/
 
 var name = "Joe Smith"
 print("Your name is \(name)")
 
-//: The sentence is printed as one string because string interpolation combined it for us.
+/*:
+ The sentence is printed as one string because string interpolation combined it for us.
+ */
 
-//: ### Challenge 6
-//: Declare three variables about a person with their name, age and height. Then print out a sentence describing the person with the three variables. Ex: Your name is Joe Smith, you age is 35, and your height is 175cm.
+/*:
+ - Experiment:
+ Declare three variables about a person with their name, age and height. Then print out a sentence describing the person with the three variables.
+ */
+/*:
+ - Example:
+ "Your name is Joe Smith, you age is 35, and your height is 175cm."
+ */
 
 
+/*:
+ - Experiment:
+ Math calculations can be included within the `\()` such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
+ */
 
-//: ## Control Flow
-//:
-//: Control flow are code structures that run certain code based on a condition. You've already seen this in Objective-C, if and switch statements. The syntax is very similar except for the omission of the parenthesis around the condition
-//:
-//: The following if statement showcases multiple conditions to check. Try changing the value of 'limit' and see the results
-let limit = 102
 
-if limit > 100 {
-    print("This number is beyond my limit")
-}
-else if limit > 50 {
-    print("This number is an acceptable limit")
+/*:
+ ## Control Flow
+
+ Use 'if' and 'switch' to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
+*/
+
+let myConditional = true
+if myConditional {
+    print("It's true!")
 }
 else{
-    print("This number is way below my limit")
+    print("It's false!")
 }
 
-//: The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you. Try changing the 'vegetable' variable to test the conditions and figure out how they work
+/*:
+ - Experiment:
+  Try creating your own 'if' statement that determines whether a given number is even, odd or zero.
+ */
+
+
+/*:
+ - Experiment:
+ The following switch statement showcases multiple conditions to check. Some of the case conditions may be unfamiliar to you.
+ Try changing the 'vegetable' variable to test the conditions and figure out how they work.
+ */
+
 let vegetable = "red pepper"
 var vegetableComment = ""
 switch vegetable {
@@ -47,13 +71,25 @@ default:
 }
 
 
-//: ### Challenge 7
-//: Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
+/*:
+ - Callout(Challenge):
+ Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
+ */
 
 
-//: ### Challenge 8
-//: Rewrite the above Challenge 7 as a switch statement
+/*:
+ - Callout(Challenge):
+ Rewrite the above Challenge as a switch statement
+ */
 
 
+/*:
+ - Callout(Challenge):
+ Write a conditional 'if' statement to determine whether a given year is considered a leap year or not.
+ Here are the rules to determine leap year:
+ - The year can be evenly divided by 4 = Is Leap Year
+ - If the year can be evenly divided by 100 = Is NOT a Leap Year, unless;
+ - The year is also evenly divisible by 400 = Is Leap Year
+ */
 
 //: [Next](@next)
