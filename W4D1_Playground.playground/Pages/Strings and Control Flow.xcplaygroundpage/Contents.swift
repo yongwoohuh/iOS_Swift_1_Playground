@@ -5,6 +5,10 @@
 
  String interpolation is combining variables and constants inside a string.
  We can do this by writing the value in parentheses and write a backslash (`\`) before the parentheses.
+ 
+ - Note:
+ Formatting strings in Objective-C was usually done with the `stringWithFormat:` method.
+ 
  For example:
 */
 
@@ -35,6 +39,8 @@ print("Your name is \(name)")
  ## Control Flow
 
  Use 'if' and 'switch' to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
+ - Note:
+ Swift switch statement supports pattern matching for different switch cases. You'll get to try them out with example below.
 */
 
 let myConditional = true

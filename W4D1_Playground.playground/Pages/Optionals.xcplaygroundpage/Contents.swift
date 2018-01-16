@@ -13,6 +13,11 @@ var numberValue: Int? = 30
 var doubleNumberValue: Double? = nil
 
 /*:
+ - Note:
+ Using optionals is similar to using `nil` with pointers in Objective-C, but they work for any type, not just classes. Also, Swift's `nil` isn't the same as `nil` in Objective-C. In Objective-C, `nil` is a pointer to a nonexistent object. In Swift, `nil` isn't a pointer - it's the absence of a value of a certain type.
+ */
+
+/*:
  - Experiment:
  Declare a non-optional variable of a String and set it to nil. What happens?
  */

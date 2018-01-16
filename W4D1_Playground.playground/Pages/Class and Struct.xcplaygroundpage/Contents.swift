@@ -4,6 +4,9 @@
  ## Class and Struct
  
  Classes are a way to group together common data together. You can think of them as a 'blueprint' for creating 'objects'. Structs are similar but they cannot be subclassed and any instance of them are passed by value NOT by reference.
+ 
+ - Note:
+ Class and Structs will be defined in a single file and it will be made available for other code to use. In Objective-C, you had to define your class and structs in a header file and an implementation file.
  */
 
 /*:

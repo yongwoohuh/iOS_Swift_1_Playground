@@ -5,9 +5,8 @@
 
  For loops are a way to repeat a set of statements a certain number of times.
  
- The traditional 'C-style' loop does not exists in Swift anymore: `for ( int i = 0; i<10; i++ )`
- 
- Instead, you create for loops that perform your set of statements for each item in a range or collection.
+ - Note:
+ The traditional 'C-style' loop does not exists in Swift anymore: `for ( int i = 0; i<10; i++ )`. Instead, you create for loops that perform your set of statements for each item in a range or collection.
  */
 
 // This is our collection

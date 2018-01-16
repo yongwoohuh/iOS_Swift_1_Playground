@@ -60,6 +60,9 @@ class Square: ShapeProtocol {
  Extensions are a way to add additional functions to an existing class, struct or enum.
  \
  For example, I can extend the 'Double' class to add a function I may use very often such as squaring a number. ie: 4*4 = 16
+ 
+ - Note:
+ Extensions are like categories from Objective-C. Unlike Objective-C categories, Swift extensions do not have names.
  */
 
 // This is declaring an extension on the Double class
@@ -77,7 +80,7 @@ var mySquaredDoubleValue = myDoubleValue.square()
 
 /*:
  - Experiment:
- Try adding the 'square' function the Float type
+ Try adding the 'square' function to the Float type
  */
 
 

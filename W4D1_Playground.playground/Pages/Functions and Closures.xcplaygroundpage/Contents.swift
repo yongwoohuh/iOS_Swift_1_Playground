@@ -74,6 +74,9 @@ func sayHello(toPerson: String) -> String{
  ## Closures
  
  Closures are also a set of statements grouped together but the closure can be stored and passed around and executed somewhere else.
+ 
+ - Note:
+ A closure in Swift is similar to blocks in Objective-C
  */
 /*:
  For example, the UIViewController has a 'dismiss' method.

@@ -58,6 +58,9 @@ for (kind, numbers) in interestingNumbers {
 /*:
  ## Enums
  Enums are related values defined by the user. An example to think of this are the months within a year. There are only 12 months and when you are programming, you'll need a way to represent this. We could potentially use a String for each month, but that could lead to spelling mistakes. So instead, we can define our own values that makes it obvious to you.
+ 
+ - Note:
+ Enums in Swift are *WAY* more powerful than in Objective-C. Enums in Swift can have methods and an assigned value that can be a string, a character, or a value of any integer or floating-point type.
  */
 
 enum Months: Int{
@@ -102,7 +105,7 @@ let marchMonth = Months.March
 
 /*:
  - Callout(Challenge):
- Create enums for the game "Rock, Paper, Scissors". Then create a function within the enum that compares two hand shapes and determines the winner.
+ Create enums for the game "Rock, Paper, Scissors". Create a function within the enum that compares two hand shapes and determines the winner. Then create a function that returns ✋ , ✌️, or 👊 given rock, paper, or scissors.
 */
 
 
