@@ -93,7 +93,7 @@ let marchMonth = Months.March
 
 /*:
  - Experiment:
- Finish the rest of the months for our 'Months' enum. Then take a look at 'abbreviatedStringForm()' function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling Months.January.abbreviatedStringForm() returns "Jan".
+ Finish the rest of the months for our `Months` enum. Then take a look at `abbreviatedStringForm()` function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling `Months.January.abbreviatedStringForm()` returns "Jan".
  */
 
 
