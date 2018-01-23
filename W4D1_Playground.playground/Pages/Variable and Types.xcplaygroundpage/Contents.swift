@@ -1,7 +1,3 @@
-/*:
- # Lighthouse Labs
- ### W4D1 - A Swift Introduction
-*/
 
 /*:
  Swift playgrounds allow you to run Swift code directly without having to code an entire app.
@@ -24,10 +20,10 @@ students = 7
 
 /*:
  - Experiment:
- Try creating a some variables for your name, and age.
+ Try creating a variable and/or constant for your name, and age.
  What happens if you try to change the value of a constant?
  */
-// variables
+// variables & constants
 
 
 //: ---
@@ -46,8 +42,8 @@ students = 7
  
  - Experiment:
   Try changing the value of `weeksCompleted` to another integer.
-  What happens if you try to change the value to a String like "4"?
-  What happens if you try to change the value to a decimal like 4.1?
+  What happens if you try to change the value to a `String` like "4"?
+  What happens if you try to change the value to a `Double` like 4.1?
  */
 
 var weeksCompleted = 4
