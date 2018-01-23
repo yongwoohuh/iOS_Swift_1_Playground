@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Variable and Types'/>
         <page name='Strings and Control Flow'/>
         <page name='Arrays and Dictionaries'/>
+        <page name='Loops'/>
         <page name='Tuple and Enums'/>
         <page name='Optionals'/>
-        <page name='Loops'/>
         <page name='Class and Struct'/>
         <page name='Functions and Closures'/>
         <page name='Protocols and Extensions'/>

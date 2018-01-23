@@ -2,7 +2,7 @@
 
 /*:
  ## Tuples
- Tuples are a type that can store multiple values into a group. You can also name each of values if you choose to.
+ Tuples are a type that can store multiple values into a group. You can also name each of the values if you choose to.
  */
 // This is a tuple with a person's first name, last name and age.
 var personTuple = ("Bob", "Smith", 23)
