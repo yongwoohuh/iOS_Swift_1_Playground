@@ -104,7 +104,7 @@ print("\(myOptionalDouble!)")
 
 
 /*:
- The next way to deal with optionals is called "Conditional unwrapping" or sometimes casually called an "if-let". It's **much** safer, and won't break your Playground.
+ The next way to deal with optionals is called `"Conditional unwrapping"` or sometimes casually called an "if-let". It's **much** safer, and won't break your Playground, or any of your code.
  
   The code below uses a conditional unwrap on `gravityConstant`. This creates a new variable `unwrapped`, but only if `gravityConstant` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is a `Double` not a `Double?`
 */
