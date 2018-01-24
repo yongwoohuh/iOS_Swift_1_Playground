@@ -6,7 +6,7 @@
  Classes are a way to group together common data together. You can think of them as a 'blueprint' for creating 'objects'. Structs are similar but they cannot be subclassed and any instance of them are passed by value NOT by reference.
  
  - Note:
- Class and Structs will be defined in a single file and it will be made available for other code to use. In Objective-C, you had to define your class and structs in a header file and an implementation file.
+ Classes and Structs will be defined in a single file and will be made available for other code to use. In Objective-C, you had to define your class and structs in a header file and an implementation file. In Swift, we've only got one file to worry about :).
  */
 
 /*:
@@ -36,7 +36,7 @@ struct ShapeStruct {
 
 /*:
  - Experiment:
- Try creating an instance of the ShapeClass. We can do this by writing the class name then putting parentheses after the class name. Assign it to a declared variable and try setting 'numberofSides' and 'name' and calling the 'description' method.
+ Try creating an instance of the ShapeClass. We can do this by writing the class name then putting parentheses '()' after the class name. Assign it to a declared variable and try setting the variables 'numberofSides' and 'name' and calling the 'description' method.
  */
 
 
@@ -73,8 +73,8 @@ class NamedShapeClass {
  Let's make a new class named 'Square' and we will subclass 'NamedShapeClass'. This is already done for you below to showcase how to subclass.
  - add a new property for side length
  - create a new initializer that takes in side length and a name as parameters
- - create a new method called 'area' and it calculates the area of the square ( side length * side length )
- - override the description method and print out a new description to indicate the side length and number of sides for this square
+ - create a new method called 'area' that calculates the area of the square ( side-length * side-length )
+ - override the description method and print out a new description to indicate the side-length and number of sides for this square
  - test all your functions after you've finished
  */
 
