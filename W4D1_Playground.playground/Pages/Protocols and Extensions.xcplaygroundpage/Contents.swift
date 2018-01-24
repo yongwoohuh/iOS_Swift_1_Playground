@@ -85,7 +85,6 @@ var mySquaredDoubleValue = myDoubleValue.square()
 
 
 /*:
- - Callout(Challenge):
  We are going to add a few extensions to several classes that you could potentially use for your future projects to make things more convenient.
  */
 /*:
@@ -95,7 +94,7 @@ var mySquaredDoubleValue = myDoubleValue.square()
 
 /*:
  - Callout(Challenge):
- Create an extension on String called 'trim'. This will return a String that has the whitespace trimmed from the beginning and end. For example: "    hello there  " will return "hello there"
+ Create an extension on String called 'trim'. This will return a String that has the whitespace trimmed from the beginning and end. For example: "    hello there  " will return "hellothere"
  */
 
 /*:
@@ -107,3 +106,7 @@ var mySquaredDoubleValue = myDoubleValue.square()
  - Callout(Challenge):
  Create an extension on Double to add a function that converts the number of seconds into minutes and another function to hours. ex: Given 900 seconds, the minutes returned will be 15 minutes, and the hours returned would be 0.25 hours.
  */
+
+
+
+//: [Next](@next)
