@@ -2,7 +2,7 @@
 
 /*:
  ## Tuples
- Tuples are a type that can store multiple values into a group. You can also name each of values if you choose to.
+ Tuples are a type that can store multiple values into a group. You can also name each of the values if you choose to.
  */
 // This is a tuple with a person's first name, last name and age.
 var personTuple = ("Bob", "Smith", 23)
@@ -93,7 +93,7 @@ let marchMonth = Months.March
 
 /*:
  - Experiment:
- Finish the rest of the months for our 'Months' enum. Then take a look at 'abbreviatedStringForm()' function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling Months.January.abbreviatedStringForm() returns "Jan".
+ Finish the rest of the months for our `Months` enum. Then take a look at `abbreviatedStringForm()` function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling `Months.January.abbreviatedStringForm()` returns "Jan".
  */
 
 

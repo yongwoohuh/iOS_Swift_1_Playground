@@ -1,7 +1,3 @@
-/*:
- # Lighthouse Labs
- ### W4D1 - A Swift Introduction
-*/
 
 /*:
  Swift playgrounds allow you to run Swift code directly without having to code an entire app.
@@ -24,11 +20,10 @@ students = 7
 
 /*:
  - Experiment:
- Try creating a some variables for your name, and age.
+ Try creating a variable and/or constant for your name, and age.
  What happens if you try to change the value of a constant?
  */
-// variables
-
+// variables & constants
 
 //: ---
 
@@ -40,14 +35,14 @@ students = 7
  - Experiment:
  Hold down the Option key and click on the variables `school` and `students` above to see a popup window with information about the variable. If we click on `school`, we can see it's a `String`. What type is `students`?
  */
-
+// Students is of type int
 /*:
  We can change the data stored in a variable using the *assignment operator* `=`. The new value must _always_ be the same type as the variable, you can't assign a new value with a different type.
  
  - Experiment:
   Try changing the value of `weeksCompleted` to another integer.
-  What happens if you try to change the value to a String like "4"?
-  What happens if you try to change the value to a decimal like 4.1?
+  What happens if you try to change the value to a `String` like "4"?
+  What happens if you try to change the value to a `Double` like 4.1?
  */
 
 var weeksCompleted = 4
@@ -102,10 +97,10 @@ let widthLabel = label + String(width)
  - Experiment:
  Try removing the conversion to `String` from the last line. What error do you get?
  */
-
+// binary operator cannot be applied to two different types
 /*:
  - Callout(Challenge):
- Let's solve some simple geometric math problems. For each question, make sure you show your work just like how your teachers told you in high school. Show all the variables you are using and give them meaningful names. Hint: You can delcare your own 'pi' using 3.14
+ Let's solve some simple geometric math problems. For each question, make sure you show your work just like how your teachers told you in high school. Show all the variables you are using and give them meaningful names. Hint: You can declare your own 'pi' using 3.14
  */
 
 /*:
@@ -115,6 +110,9 @@ let widthLabel = label + String(width)
  Circumference of circle = 2 * 'pi' * radius
  \
  Volume of cylinder = 'pi' * radius^2 * height
+ */
+/*:
+ Hint: 10^2 does not equal 10*10 in Swift
  */
 
 /*:
@@ -133,5 +131,7 @@ let widthLabel = label + String(width)
  - Callout(Problem 3):
  Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
  */
-
+/*:
+ Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
+ */
 //: [Next](@next)

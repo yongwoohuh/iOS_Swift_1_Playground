@@ -25,7 +25,7 @@ print("Your name is \(name)")
  */
 /*:
  - Example:
- "Your name is Joe Smith, you age is 35, and your height is 175cm."
+ "Your name is Joe Smith, your age is 35, and your height is 175cm."
  */
 
 
@@ -34,20 +34,18 @@ print("Your name is \(name)")
  Math calculations can be included within the `\()` such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
  */
 
-
 /*:
  ## Control Flow
 
  Use 'if' and 'switch' to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
  - Note:
- Swift switch statement supports pattern matching for different switch cases. You'll get to try them out with example below.
+ Swift switch statement supports pattern matching for different switch cases. You'll get to try them out with the example below.
 */
 
 let myConditional = true
 if myConditional {
     print("It's true!")
-}
-else{
+} else {
     print("It's false!")
 }
 

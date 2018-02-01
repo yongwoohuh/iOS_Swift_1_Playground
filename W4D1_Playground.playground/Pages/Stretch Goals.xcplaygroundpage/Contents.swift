@@ -27,7 +27,7 @@
  Write a class to solve the following problem.
  */
 //:
-//: ## Problem: “How do we calculate a student’s grade for the term?”
+//: ### Problem: “How do we calculate a student’s grade for the term?”
 //:
 //: Each term has a midterm exam, a final exam, and a paper to write.
 //: Each piece has a weighted percentage
@@ -41,7 +41,5 @@
 //: Grade Scale:
 //: A > 80, B > 70, C > 60, D > 50, F < 50
 //:
-//: Requirements
+//: Requirements:
 //: We need to convert the student’s grade to an overall grade and letter grade for the term
-
-//: [Next](@next)
