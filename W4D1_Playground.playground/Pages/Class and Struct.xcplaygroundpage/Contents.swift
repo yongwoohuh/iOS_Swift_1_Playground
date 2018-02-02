@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  ## Class and Struct
  
@@ -8,9 +7,8 @@
  - Note:
  Classes and Structs will be defined in a single file and will be made available for other code to use. In Objective-C, you had to define your class and structs in a header file and an implementation file. In Swift, we've only got one file to worry about :).
  */
-
 /*:
- Here we declare a class by using the 'class' keyword and then the name of the class. Within the braces we are free to add properties and new methods for class.
+ Here we declare a class by using the `'class'` keyword and then the name of the class. Within the braces we are free to add properties and new methods for class.
  */
 class ShapeClass {
     var numberOfSides = 0
@@ -19,7 +17,7 @@ class ShapeClass {
     }
 }
 /*:
- The struct version looks the same except we use the keyword 'struct'.
+ The struct version looks the same except we use the keyword `'struct'`.
  */
 struct ShapeStruct {
     var numberOfSides = 0
@@ -86,10 +84,10 @@ class Square : NamedShapeClass {
  - Callout(Challenge):
  Follow the instructions to create your own Car class.
  
- - Create a class for Car. Add a String property called model.
+ - Create a class for Car. Add a `String` property called model.
  - Create a function called drive. Inside the function include a print statement that prints the model of the car you are driving.
- - Create a custom initalizer that requires an String model as an input.
- - Subclass Car and make a Toyota Class. Override init() and set the model to "Prius" inside the method.
+ - Create a custom initalizer that requires an `String model` as an input.
+ - Subclass Car and make a Toyota Class. `Override init()` and set the model to "Prius" inside the method.
 
  To Test:
  - Add an instance of a Car called nissan. Initialize it with model named "Rogue"
