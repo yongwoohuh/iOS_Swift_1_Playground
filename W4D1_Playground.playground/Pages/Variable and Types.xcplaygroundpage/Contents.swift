@@ -1,4 +1,3 @@
-
 /*:
  Swift playgrounds allow you to run Swift code directly without having to code an entire app.
  
@@ -7,11 +6,10 @@
     `print("Hello, world!")`
  */
 
-
 /*:
  ## Variables
 
- In Swift, we store data in variables and constants. Use `let` to make a constant and `var` to make a variable.
+ In Swift, we store data in variables and constants. Use `let` to make a `constant` and `var` to make a `variable`.
  */
 
 let school = "Lighthouse Labs"
@@ -26,7 +24,6 @@ students = 7
 // variables & constants
 
 //: ---
-
 /*:
  ## Types
  
@@ -37,7 +34,7 @@ students = 7
  */
 // Students is of type int
 /*:
- We can change the data stored in a variable using the *assignment operator* `=`. The new value must _always_ be the same type as the variable, you can't assign a new value with a different type.
+ We can change the data stored in a variable using the *assignment operator* `'='`. The new value must _always_ be the same type as the variable, you can't assign a new value with a different type.
  
  - Experiment:
   Try changing the value of `weeksCompleted` to another integer.
@@ -57,7 +54,6 @@ let implicitInteger = 70
 let implicitDouble = 70.0
 let explicitDouble: Double = 70
 
-
 /*:
  Here are some basic types which you've also seen in Objective-C:
 
@@ -66,13 +62,10 @@ let explicitDouble: Double = 70
  * Int - a whole number. ex) 5
  * Double - a decimal number with more precision. ex) 5.55
 */
-
 /*:
  - Experiment:
  Create a constant with an explicit type of `Float` and a value of `4`.
  */
-
-
 /*:
  - Experiment:
  What type are the variables `tipAmount`, and `isOpen`?
@@ -105,11 +98,11 @@ let widthLabel = label + String(width)
 
 /*:
  - Callout(Formulas):
- Area of circle = 'pi' * radius^2
+ Area of circle = pi * radius^2
  \
- Circumference of circle = 2 * 'pi' * radius
+Circumference of circle = 2 * pi * radius
  \
- Volume of cylinder = 'pi' * radius^2 * height
+Volume of cylinder = pi * radius^2 * height
  */
 /*:
  Hint: 10^2 does not equal 10*10 in Swift
@@ -119,13 +112,17 @@ let widthLabel = label + String(width)
  - Callout(Problem 1):
  Find the area of a circle with a radius of 10 metres
  */
-
+/*:
+ Hint: Make sure your radius is of type `Double`
+ */
 
 /*:
  - Callout(Problem 2):
- Find the circumference of a circle with a diameter of 24 metres. Hint: Radius is half the length of the diameter
+ Find the circumference of a circle with a diameter of 24 metres.
  */
-
+/*:
+ Hint: Radius is half the length of the diameter
+ */
 
 /*:
  - Callout(Problem 3):
@@ -134,4 +131,5 @@ let widthLabel = label + String(width)
 /*:
  Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
  */
+
 //: [Next](@next)
