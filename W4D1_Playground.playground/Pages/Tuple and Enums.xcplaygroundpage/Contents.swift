@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  ## Tuples
  Tuples are a type that can store multiple values into a group. You can also name each of the values if you choose to.
@@ -48,9 +47,9 @@ for (kind, numbers) in interestingNumbers {
 
 /*:
  - Callout(Challenge):
- Create a function that takes three parameters, a name of type String, an age of type Int, and eligable of type Bool. The function returns a tuple of the name and age if eligable is true, otherwise, it will return nil.
+ Create a function that takes three parameters, a name of type `String`, an age of type `Int`, and eligable of type `Bool`. The function returns a tuple of the name and age if eligable is true, otherwise, it will return `nil`.
  \
- To test: call your new function with eligable true and false, and print the two values
+To test: call your new function with eligable true and false, and print the two values
  (Hint: Use optional return value and conditional unwrapping)
  */
 
@@ -87,7 +86,7 @@ let marchMonth = Months.March
  - Experiment:
  Try adding '.rawValue' to the end of `Months.Januray` and `Months.March` above. What value did you get? How are these values assigned to the months?
  \
- Try removing the '= 1' from the Months enum. Now what is different?
+Try removing the '= 1' from the Months enum. Now what is different?
  */
 
 
@@ -110,4 +109,3 @@ let marchMonth = Months.March
 
 
 //: [Next](@next)
-
