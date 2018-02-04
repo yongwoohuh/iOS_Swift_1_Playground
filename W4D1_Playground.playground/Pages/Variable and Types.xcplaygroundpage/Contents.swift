@@ -107,7 +107,6 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: 10^2 does not equal 10*10 in Swift
  */
-
 /*:
  - Callout(Problem 1):
  Find the area of a circle with a radius of 10 metres

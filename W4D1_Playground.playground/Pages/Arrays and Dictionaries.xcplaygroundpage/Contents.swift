@@ -23,13 +23,13 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Try creating an empty array with an explicit type. What happens when you add a value that isn't the same type?
+ Try creating an empty array with an explicit type `[type]`. What happens when you add a value that isn't the same type?
  */
 
 
 /*:
  - Experiment:
- Try creating an empty dictionary with an explicit type.
+ Try creating an empty dictionary with an explicit type. `[keyType: valueType]`
  */
 
 
