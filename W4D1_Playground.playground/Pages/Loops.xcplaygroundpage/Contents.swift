@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  ## For Loops
 
@@ -28,7 +27,7 @@ for i in 2...5 {
 
 /*:
  - Experiment:
- What's difference between `2...5` vs `2..<5`?
+ What's the difference between `2...5` vs `2..<5`?
  */
 
 

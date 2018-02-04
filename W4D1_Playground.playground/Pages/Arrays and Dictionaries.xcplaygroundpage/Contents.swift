@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  ## Array and Dictionaries
  
@@ -18,7 +17,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Try creating an array and dictionary using 'let' vs 'var' then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
+ Try creating an array and dictionary using `'let'` vs `'var'` then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
 
 
