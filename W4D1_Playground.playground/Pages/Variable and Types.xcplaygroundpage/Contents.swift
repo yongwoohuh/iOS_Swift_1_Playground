@@ -27,7 +27,7 @@ students = 7
  Try creating a some variables for your name, and age.
  What happens if you try to change the value of a constant?
  */
-// variables
+
 
 
 //: ---
