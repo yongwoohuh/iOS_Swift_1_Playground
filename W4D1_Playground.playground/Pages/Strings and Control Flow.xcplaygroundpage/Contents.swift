@@ -1,10 +1,9 @@
 //: [Previous](@previous)
-
 /*:
  ## String Interpolation
 
  String interpolation is combining variables and constants inside a string.
- We can do this by writing the value in parentheses and write a backslash (`\`) before the parentheses.
+ We can do this by writing the value in parentheses and write a backslash "`\`" before the parentheses.
  
  - Note:
  Formatting strings in Objective-C was usually done with the `stringWithFormat:` method.
@@ -18,36 +17,33 @@ print("Your name is \(name)")
 /*:
  The sentence is printed as one string because string interpolation combined it for us.
  */
-
 /*:
  - Experiment:
  Declare three variables about a person with their name, age and height. Then print out a sentence describing the person with the three variables.
  */
 /*:
  - Example:
- "Your name is Joe Smith, you age is 35, and your height is 175cm."
+ "Your name is Joe Smith, your age is 35, and your height is 175cm."
  */
 
 
 /*:
  - Experiment:
- Math calculations can be included within the `\()` such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
+ Math calculations can be included within the "`\()`" such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
  */
-
 
 /*:
  ## Control Flow
 
- Use 'if' and 'switch' to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
+ Use `'if'` and `'switch'` to make conditionals that run certain blocks of code. You've already seen this in Objective-C. The syntax is very similar except for the omission of the parenthesis around the condition.
  - Note:
- Swift switch statement supports pattern matching for different switch cases. You'll get to try them out with example below.
+ Swift switch statement supports pattern matching for different switch cases. You'll get to try them out with the example below.
 */
 
 let myConditional = true
 if myConditional {
     print("It's true!")
-}
-else{
+} else {
     print("It's false!")
 }
 

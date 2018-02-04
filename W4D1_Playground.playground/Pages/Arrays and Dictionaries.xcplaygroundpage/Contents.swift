@@ -1,9 +1,8 @@
 //: [Previous](@previous)
-
 /*:
  ## Array and Dictionaries
  
-  Arrays and dictionaries allow us to store a collection of data. Create arrays and dictionaries using brackets '[]'. Remember that arrays hold a collection data based on an index, so we can access a value by writing the desired index within the brackets. With dictionaries, they hold a key and a value, and we can access a value by writing the desired key within the brackets.
+  Arrays and dictionaries allow us to store a collection of data. Create arrays and dictionaries using brackets '[]'. Remember that arrays hold a collection data based on an index, so we can access a value by writing the desired index within the brackets. Arrays also begin at index `0`. Dictionaries hold a key and a value, and we can access a value by writing the desired key within the brackets.
  */
 
 // We can declare an array with square brackets syntax
@@ -18,7 +17,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Experiment:
- Try creating an array and dictionary using 'let' vs 'var' then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
+ Try creating an array and dictionary using `'let'` vs `'var'` then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
 
 
@@ -57,7 +56,7 @@ myDictionary["Principal"] = 1
 
 /*:
  - Callout(Challenge):
-    Declare a mutable array that is empty and holds Strings. On the next few lines, add the following names to the array: John, Karen, Jane
+    Declare a mutable array that is empty and holds `Strings`. On the next few lines, add the following names to the array: John, Karen, Jane
  
     Finally, print out each person's name from the array using their index and string interpolation
 */

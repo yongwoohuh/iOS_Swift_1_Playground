@@ -1,8 +1,7 @@
 //: [Previous](@previous)
-
 /*:
  ## Tuples
- Tuples are a type that can store multiple values into a group. You can also name each of values if you choose to.
+ Tuples are a type that can store multiple values into a group. You can also name each of the values if you choose to.
  */
 // This is a tuple with a person's first name, last name and age.
 var personTuple = ("Bob", "Smith", 23)
@@ -48,9 +47,9 @@ for (kind, numbers) in interestingNumbers {
 
 /*:
  - Callout(Challenge):
- Create a function that takes three parameters, a name of type String, an age of type Int, and eligable of type Bool. The function returns a tuple of the name and age if eligable is true, otherwise, it will return nil.
+ Create a function that takes three parameters, a name of type `String`, an age of type `Int`, and eligable of type `Bool`. The function returns a tuple of the name and age if eligable is true, otherwise, it will return `nil`.
  \
- To test: call your new function with eligable true and false, and print the two values
+To test: call your new function with eligable true and false, and print the two values
  (Hint: Use optional return value and conditional unwrapping)
  */
 
@@ -87,13 +86,13 @@ let marchMonth = Months.March
  - Experiment:
  Try adding '.rawValue' to the end of `Months.Januray` and `Months.March` above. What value did you get? How are these values assigned to the months?
  \
- Try removing the '= 1' from the Months enum. Now what is different?
+Try removing the '= 1' from the Months enum. Now what is different?
  */
 
 
 /*:
  - Experiment:
- Finish the rest of the months for our 'Months' enum. Then take a look at 'abbreviatedStringForm()' function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling Months.January.abbreviatedStringForm() returns "Jan".
+ Finish the rest of the months for our `Months` enum. Then take a look at `abbreviatedStringForm()` function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling `Months.January.abbreviatedStringForm()` returns "Jan".
  */
 
 
@@ -110,4 +109,3 @@ let marchMonth = Months.March
 
 
 //: [Next](@next)
-

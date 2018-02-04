@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  ## For Loops
 
@@ -28,7 +27,7 @@ for i in 2...5 {
 
 /*:
  - Experiment:
- What's difference between `2...5` vs `2..<5`?
+ What's the difference between `2...5` vs `2..<5`?
  */
 
 
@@ -49,13 +48,17 @@ for i in 2...5 {
  Take a look at the example below. Modify the code so that it searches for both the largest and smallest number. Then print out the result.
  */
 
+/*:
+ Hint: Use an `_` so that you can avoid making another unecessary variable for the iteration value.
+ */
+
 let interestingNumbers = [
     "Prime": [2, 3, 5, 7, 11, 13],
     "Fibonacci": [1, 1, 2, 3, 5, 8],
     "Square": [1, 4, 9, 16, 25],
 ]
 var largest = 0
-for (kind, numbers) in interestingNumbers {
+for (_, numbers) in interestingNumbers {
     for number in numbers {
         if number > largest {
             largest = number
