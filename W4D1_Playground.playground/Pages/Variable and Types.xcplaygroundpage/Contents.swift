@@ -5,7 +5,7 @@
  
     `print("Hello, world!")`
  */
-
+print("Hello, world!")
 /*:
  ## Variables
 
@@ -21,7 +21,9 @@ students = 7
  Try creating a variable and/or constant for your name, and age.
  What happens if you try to change the value of a constant?
  */
-
+let name = "Yongwoo Huh"
+var age = 35
+age = 36
 
 //: ---
 /*:
@@ -32,7 +34,7 @@ students = 7
  - Experiment:
  Hold down the Option key and click on the variables `school` and `students` above to see a popup window with information about the variable. If we click on `school`, we can see it's a `String`. What type is `students`?
  */
-// Students is of type int
+// Students is of type Int
 /*:
  We can change the data stored in a variable using the *assignment operator* `'='`. The new value must _always_ be the same type as the variable, you can't assign a new value with a different type.
  
@@ -42,7 +44,7 @@ students = 7
   What happens if you try to change the value to a `Double` like 4.1?
  */
 
-var weeksCompleted = 4
+var weeksCompleted = 4.5
 
 /*:
  As you can see, you don't have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler _infer_ its type. In the example above, the compiler infers that `students` is an integer because its initial value is an integer.
@@ -71,12 +73,14 @@ let explicitDouble: Double = 70
  What type are the variables `tipAmount`, and `isOpen`?
  */
 
+let explicitFloat: Float = 4
+
 var tipAmount = 6.01
-// tipAmount's type is:
+// tipAmount's type is: Double
 
 
 var isOpen = true
-// isOpen's type is:
+// isOpen's type is: Bool
 
 /*:
 Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.
@@ -114,7 +118,9 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Make sure your radius is of type `Double`
  */
-
+let pi = 3.141592
+var radius: Double = 10
+print("area of circle with radius \(radius) is \(pi * radius * radius)")
 /*:
  - Callout(Problem 2):
  Find the circumference of a circle with a diameter of 24 metres.
@@ -122,7 +128,9 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Radius is half the length of the diameter
  */
-
+var diameter: Double = 24
+radius = diameter / 2
+print("circumference of a circle with a diameter of \(diameter) is \(2 * pi * radius)")
 /*:
  - Callout(Problem 3):
  Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
@@ -130,6 +138,8 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
  */
-
+radius = 5
+var height: Double = 7
+print("volume of a cylinder with radius \(radius) and height \(height) is \(pi * radius * radius * height)")
 
 //: [Next](@next)

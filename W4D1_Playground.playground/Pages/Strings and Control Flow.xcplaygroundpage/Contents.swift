@@ -25,13 +25,17 @@ print("Your name is \(name)")
  - Example:
  "Your name is Joe Smith, your age is 35, and your height is 175cm."
  */
+name = "Yongwoo Huh"
 
+var age = 35
+var height = 1.77
+print("My name is \(name), age \(age) years old and \(height) meters tall.")
 
 /*:
  - Experiment:
  Math calculations can be included within the "`\()`" such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
  */
-
+print("My age will be \(age + 10) in a decade")
 /*:
  ## Control Flow
 
@@ -51,7 +55,12 @@ if myConditional {
  - Experiment:
   Try creating your own 'if' statement that determines whether a given number is even, odd or zero.
  */
-
+let myNumber = 33
+if myNumber % 2 == 0 {
+  print("It's even.")
+} else {
+  print("It's odd.")
+}
 
 /*:
  - Experiment:
@@ -59,7 +68,7 @@ if myConditional {
  Try changing the 'vegetable' variable to test the conditions and figure out how they work.
  */
 
-let vegetable = "red pepper"
+let vegetable = "carrot"
 var vegetableComment = ""
 switch vegetable {
 case "celery":
@@ -77,13 +86,28 @@ default:
  - Callout(Challenge):
  Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
  */
+var bicycleCount = 4
 
+if bicycleCount == 0 {
+  print("There are zero bicyles")
+} else if bicycleCount == 1 {
+  print("There is \(bicycleCount) bicycle")
+} else {
+  print("There are \(bicycleCount) bicycles")
+}
 
 /*:
  - Callout(Challenge):
  Rewrite the above Challenge as a switch statement
  */
-
+switch bicycleCount {
+case 0:
+  print("There are zero bicycles.")
+case 1:
+  print("There is \(bicycleCount) bicycle.")
+default:
+  print("There are \(bicycleCount) bicycles.")
+}
 
 /*:
  - Callout(Challenge):
@@ -93,5 +117,14 @@ default:
  - If the year can be evenly divided by 100 = Is NOT a Leap Year, unless;
  - The year is also evenly divisible by 400 = Is Leap Year
  */
-
+let year = 2000
+if year % 400 == 0 {
+  print("year \(year) is a leap year")
+} else if year % 100 == 0 {
+  print("year \(year) is not a leap year")
+} else if year % 4 == 0 {
+  print("year \(year) is a leap year")
+} else {
+  print("year \(year) is not a leap year")
+}
 //: [Next](@next)
