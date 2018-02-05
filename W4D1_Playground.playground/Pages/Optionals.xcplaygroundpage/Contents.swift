@@ -19,7 +19,7 @@ var doubleNumberValue: Double? = nil
  - Experiment:
  Declare a non-optional variable of a `String` and set it to `nil`. What happens?
  */
-
+//var nilString: String = nil
 
 /*:
  - Experiment:
@@ -47,13 +47,14 @@ ratio * convertIntegerValue // now this works!
  - Experiment:
  Declare a `String` containing digits and try converting it to a `Double` the same way shown in the above example. What do you notice about the variable type? Hint: Use 'Option' + Mouse Click on the variable to see the type
  */
-
+var myString: String = "12"
+var convertedString = Double(myString)
 
 /*:
  - Experiment:
  With your newly converted `Double` from a `String`, try multiplying it with the 'ratio' variable. What happens?
  */
-
+//convertedString * ratio
 
 /*:
  Your newly converted `Double` value is a `Double?` which indicates we might have a double or we might have nothing.  Converting a `String` to a `Double` might fail because the `String` does not guarantee there will only be digits within it.
@@ -77,7 +78,7 @@ print("\(myOptionalDouble!)")
   - Experiment:
  Now you try! Try printing out your converted `Double?` with a force unwrap
 */
-
+print("\(convertedString!)")
 
 
 /*:
@@ -92,13 +93,16 @@ print("\(myOptionalDouble!)")
  Declare an optional variable of a type `String` and set an initial `String` value to it. Try printing it.
  Now print it again, but this time unwrap the optional variable using the `'!'`. What's different about the two lines you printed?
  */
-
+var quote: String? = "Waste no more"
+print(quote)
+//print(quote!)
 
 /*:
  - Experiment:
  Try setting an optional `String` variable to a non-optional `String` variable. What happens? What can you do to prevent the compiler from throwing an error?
  */
-
+var newQuote = quote
+print(newQuote)
 
 /*:
  The next way to deal with optionals is called `"Conditional unwrapping"` or sometimes casually called an `"if-let"`. It's **much** safer, and won't break your Playground, or any of your code.
@@ -106,7 +110,7 @@ print("\(myOptionalDouble!)")
   The code below uses a conditional unwrap on `gravityConstant`. This creates a new variable `unwrapped`, but only if `gravityConstant` is *not* nil. If you option click on the variable `unwrapped` you will notice that it is a `Double` not a `Double?`
 */
 
-let gravityConstant: Double? = 9.8
+let gravityConstant: Double? = nil
 
 if let unwrapped = gravityConstant {
     // unwrapped exists in this block, and is number unwrapped.
@@ -127,13 +131,27 @@ if let unwrapped = gravityConstant {
  - Experiment:
  Create an array with containing elements of any type of your choice. Try experimenting with the array methods `'first'` and `'last'` to find out what they do. You'll see that both return optional values. Print out the values of first and last by using conditional unwrapping.
  */
+var numberSquared = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+if let firstNumber = numberSquared.first {
+  print("the first number in the array is \(firstNumber)")
+} else {
+  print("could not open the first item")
+}
 
-
+if let lastNumber = numberSquared.last {
+  print("the last items in the array is \(lastNumber)")
+} else {
+  print("last item is nil")
+}
 /*:
  - Experiment:
  Using the same array, experiment with the array method `'indexOf'` and find out what it does. Print out the value using conditional unwrapping.
  */
-
+if let thirdItem = numberSquared.index(of: 9) {
+  print("third item is \(thirdItem)")
+} else {
+  print("there is no third item")
+}
 
 /*:
  - Callout(Challenge):
@@ -150,3 +168,22 @@ if let unwrapped = gravityConstant {
     Try printing a car's price using a name that doesn't exist.
 */
 //: [Next](@next)
+var cars = ["Mazda3": 50000, "CRV": 60000, "Hummer": 100000]
+
+if let mazda3Price = cars["Mazda3"] {
+  print("Mazad3 price is \(mazda3Price)")
+} else {
+  print("Did not get item")
+}
+
+if let CRVPrice = cars["CRV"] {
+  print("CRV price is \(CRVPrice)")
+} else {
+  print("Did not get item")
+}
+
+if let hummerPrice = cars["Hummer"] {
+  print("Hummer price is \(hummerPrice)")
+} else {
+  print("Did not get item")
+}
