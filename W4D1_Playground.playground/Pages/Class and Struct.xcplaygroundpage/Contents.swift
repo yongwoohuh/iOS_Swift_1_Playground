@@ -151,13 +151,13 @@ First, create a Person class with a name property and a custom initializer that 
 Now create the same Person class but convert it to a struct. Uncomment 'Section B'. What do think will happen? What are the results?
 */
 // Implement Person class under here!
-//class Person {
-//  var name: String
-//
-//  init(name: String) {
-//    self.name = name
-//  }
-//}
+class Person {
+  var name: String
+
+  init(name: String) {
+    self.name = name
+  }
+}
 
 // Section A
 var firstPersonObject = Person(name: "Joe")
@@ -169,18 +169,18 @@ print(secondPersonObject.name)
 
 
 // Implement Person struct under here!
-struct Person {
-  var name: String
-}
-
-
-// Section B
-var firstPersonStruct = Person(name: "Joe")
-var secondPersonStruct = firstPersonStruct
-secondPersonStruct.name = "Jane"
-
-print(firstPersonStruct.name)
-print(secondPersonStruct.name)
+//struct Person {
+//  var name: String
+//}
+//
+//
+//// Section B
+//var firstPersonStruct = Person(name: "Joe")
+//var secondPersonStruct = firstPersonStruct
+//secondPersonStruct.name = "Jane"
+//
+//print(firstPersonStruct.name)
+//print(secondPersonStruct.name)
 
 
 //: [Next](@next)

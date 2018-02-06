@@ -23,13 +23,20 @@ namedPersonTuple.age
  - Experiment:
  Try creating your own tuple. Mix in different variable types and try mixing some parameters with names and some without. Does it still work?
  */
+var personTuple2 = (firstName: "Yongowo", "Huh", age: 35)
+personTuple2.firstName
+personTuple2.1
+personTuple2.age
 
 
 /*:
  - Experiment:
  Try nesting tuples within one another. Create a tuple and add a tuple as one of its items.
  */
-
+var myTuple = (firstName: "Yongwoo", location:(lat:35.1111, long: 24.235234))
+myTuple.firstName
+myTuple.location.lat
+myTuple.location.long
 
 /*:
  - Experiment:
@@ -42,6 +49,7 @@ let interestingNumbers = [
     "Square": [1, 4, 9, 16, 25],
 ]
 for (kind, numbers) in interestingNumbers {
+  print("\(numbers) are \(kind) numbers")
     
 }
 
@@ -52,7 +60,21 @@ for (kind, numbers) in interestingNumbers {
 To test: call your new function with eligable true and false, and print the two values
  (Hint: Use optional return value and conditional unwrapping)
  */
+func canDrinkLegally(name: String, age: Int, eligable: Bool) -> (name: String, age: Int, Bool)? {
+  
+  if eligable && age > 18 {
+      return (name, age, eligable)
+  } else {
+    return nil
+  }
+  
+}
 
+if let person1 = canDrinkLegally(name: "Yongwoo", age: 16, eligable: true) {
+  print(" \(person1.name) can drink legally :)")
+} else {
+  print("Don't drink illegally")
+}
 
 /*:
  ## Enums

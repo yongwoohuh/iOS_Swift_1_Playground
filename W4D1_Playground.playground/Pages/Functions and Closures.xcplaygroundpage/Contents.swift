@@ -183,18 +183,4 @@ print(newString1)
  Create a closure with at least two parameters of your choice and decide whether or not it returns anything. Then create a function that takes in your closure as a parameter and one additional parameter of your choice.
  */
 //: [Next](@next)
-var twoParamsClosure = { (num1:Int, num2:Int) -> (Int) in
-  return num1 * num2
-}
 
-func functionWithClosure(num: Int, twoParamsClosure: (Int, Int)->Int) -> Int{
-  var result = 0
-  result += num * twoParamsClosure(num, num)
-  
-  return result
-}
-// can I send a closure with two different parameters.
-let numParam = 2
-let numParam2 = 4
-
-functionWithClosure(num: 3, twoParamsClosure: twoParamsClosure(numParam, numParam2))
