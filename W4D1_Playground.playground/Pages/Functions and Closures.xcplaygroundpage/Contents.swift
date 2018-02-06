@@ -42,23 +42,60 @@ func sayHello(toPerson: String) -> String{
  - Experiment:
  Try calling all of the functions above. They all have the same function name, but the compiler doesn't complain. Can you think of why this might be?
  */
-
+sayHello()
+let _: Void = sayHello(toPerson: "Monday")
+var sameNameDifferentBehavior: String = sayHello(toPerson: "Yongwoo")
+print(sameNameDifferentBehavior)
 /*:
  - Experiment:
  Try creating your own function that accepts two parameters of any type you choose. Have the function print out the two parameters and test your function.
  */
 
+func printTwoParameters(string: String, number: Double) {
+  print("The string is \(string), and the number is \(number)")
+}
+printTwoParameters(string: "Hello", number: 2.63451)
 /*:
  - Callout(Challenge):
  Create four separate functions to add, subtract, multiple, and divide with two parameters given to it and returns a number result. Try testing each one afterwards.
  
  */
+func add(num1: Int, num2: Int) -> Int {
+  return num1 + num2
+}
 
+func subtract(num1: Int, num2: Int) -> Int {
+  return num1 - num2
+}
+
+func multiple(num1: Int, num2:Int) -> Int {
+  return num1 * num2
+}
+
+func divide(num1: Int, num2: Int) -> Int {
+  return num1 / num2
+}
+
+add(num1:4, num2: 2)
+subtract(num1: 4, num2: 2)
+multiple(num1: 4, num2: 2)
+divide(num1: 4, num2: 2)
 /*:
  - Callout(Challenge):
  Create your own 'reverse' function that takes in an array of Int, reverses the order of the array, and returns the newly reversed array of Int. The array class has its own 'reverse' method, but do not use it for this challenge.
  */
-
+let orignalIntArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+func reverseArray(_ intArray: [Int]) -> [Int] {
+  var newIntArray = [Int]()
+  var index = intArray.count - 1
+  while index > 0 {
+    newIntArray.append(intArray[index])
+    index -= 1
+  }
+  newIntArray.append(intArray[index])
+  return newIntArray
+}
+print("reversed array is \(reverseArray(orignalIntArray))")
 /*:
  ## Closures
  
@@ -117,19 +154,47 @@ var sayHelloClosureWithReturn = { (name: String) -> String in
  - Experiment:
  Try calling all of the closures above. What do you notice that is different from calling a function?
  */
-
+sayHelloClosure()
+sayHelloClosureToPerson("Lighthouse Labs")
+var newString = sayHelloClosureWithReturn("Monday")
+print(newString)
 /*:
  - Experiment:
  Try creating your own closure that accepts two parameters of any type you choose. Have the closure print out the two parameters and test your closure.
  */
+var closureWithTwoParameter = { (name: String, age: Int) -> () in
+  print("Hello \(name). You are \(age) years old.")
+}
+
+closureWithTwoParameter("Yongwoo", 35)
 
 /*:
  - Experiment:
  Declare a variable with an explicit closure type: `(String) -> (String)`. This closure type says it takes one parameter of type String and returns a variable of type String.
  */
+var stringClosure = { (title: String) -> String in
+  return "\(title) is the book I want."
+}
 
+var newString1 = stringClosure("'5 language of love'")
+print(newString1)
 /*:
  - Callout(Challenge):
  Create a closure with at least two parameters of your choice and decide whether or not it returns anything. Then create a function that takes in your closure as a parameter and one additional parameter of your choice.
  */
 //: [Next](@next)
+var twoParamsClosure = { (num1:Int, num2:Int) -> (Int) in
+  return num1 * num2
+}
+
+func functionWithClosure(num: Int, twoParamsClosure: (Int, Int)->Int) -> Int{
+  var result = 0
+  result += num * twoParamsClosure(num, num)
+  
+  return result
+}
+// can I send a closure with two different parameters.
+let numParam = 2
+let numParam2 = 4
+
+functionWithClosure(num: 3, twoParamsClosure: twoParamsClosure(numParam, numParam2))

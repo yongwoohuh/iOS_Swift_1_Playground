@@ -94,7 +94,7 @@ print("\(convertedString!)")
  Now print it again, but this time unwrap the optional variable using the `'!'`. What's different about the two lines you printed?
  */
 var quote: String? = "Waste no more"
-print(quote)
+print(quote ?? "")
 //print(quote!)
 
 /*:
@@ -102,7 +102,7 @@ print(quote)
  Try setting an optional `String` variable to a non-optional `String` variable. What happens? What can you do to prevent the compiler from throwing an error?
  */
 var newQuote = quote
-print(newQuote)
+print(newQuote ?? "")
 
 /*:
  The next way to deal with optionals is called `"Conditional unwrapping"` or sometimes casually called an `"if-let"`. It's **much** safer, and won't break your Playground, or any of your code.
