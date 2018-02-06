@@ -44,26 +44,26 @@ myTuple.location.long
  */
 
 let interestingNumbers = [
-    "Prime": [2, 3, 5, 7, 11, 13],
-    "Fibonacci": [1, 1, 2, 3, 5, 8],
-    "Square": [1, 4, 9, 16, 25],
+  "Prime": [2, 3, 5, 7, 11, 13],
+  "Fibonacci": [1, 1, 2, 3, 5, 8],
+  "Square": [1, 4, 9, 16, 25],
 ]
 for (kind, numbers) in interestingNumbers {
   print("\(numbers) are \(kind) numbers")
-    
+  
 }
 
 /*:
  - Callout(Challenge):
  Create a function that takes three parameters, a name of type `String`, an age of type `Int`, and eligable of type `Bool`. The function returns a tuple of the name and age if eligable is true, otherwise, it will return `nil`.
  \
-To test: call your new function with eligable true and false, and print the two values
+ To test: call your new function with eligable true and false, and print the two values
  (Hint: Use optional return value and conditional unwrapping)
  */
 func canDrinkLegally(name: String, age: Int, eligable: Bool) -> (name: String, age: Int, Bool)? {
   
   if eligable && age > 18 {
-      return (name, age, eligable)
+    return (name, age, eligable)
   } else {
     return nil
   }
@@ -73,7 +73,7 @@ func canDrinkLegally(name: String, age: Int, eligable: Bool) -> (name: String, a
 if let person1 = canDrinkLegally(name: "Yongwoo", age: 16, eligable: true) {
   print(" \(person1.name) can drink legally :)")
 } else {
-  print("Don't drink illegally")
+  print("Don't drink until you are 18.")
 }
 
 /*:
@@ -85,49 +85,135 @@ if let person1 = canDrinkLegally(name: "Yongwoo", age: 16, eligable: true) {
  */
 
 enum Months: Int{
-    case January = 1
-    case Feburary
-    case March
-    case April
-    case May, June, July, August
-    //...
-    
-    func abbreviatedStringForm() -> String {
-        switch self {
-            default:
-                return ""
-        }
+  case January = 1
+  case Feburary
+  case March
+  case April
+  case May
+  case June
+  case July
+  case August
+  case September
+  case October
+  case November
+  case December
+  
+  func abbreviatedStringForm() -> String {
+    switch self {
+    case .January :
+      return "Jan."
+    case .Feburary :
+      return "Feb."
+    case .March :
+      return "Mar."
+    case .April :
+      return "Apr."
+    case .May :
+      return "May."
+    case .June :
+      return "Jun."
+    case .July :
+      return "Jul."
+    case .August :
+      return "Aug."
+    case .September :
+      return "Sept."
+    case .October :
+      return "Oct."
+    case .November :
+      return "Nov."
+    case .December :
+      return "Dec."
     }
+  }
+  
+  func compare(to end: Months) -> Int {
+    return abs(self.rawValue - end.rawValue)
+  }
 }
 
 //: Now we can represents the months in our program with easy readiablity and minimal mistakes.
-let januaryMonth = Months.January
-let marchMonth = Months.March
+let januaryMonth = Months.January.abbreviatedStringForm()
+let marchMonth = Months.March.rawValue
+
 
 /*:
  - Experiment:
  Try adding '.rawValue' to the end of `Months.Januray` and `Months.March` above. What value did you get? How are these values assigned to the months?
  \
-Try removing the '= 1' from the Months enum. Now what is different?
+ Try removing the '= 1' from the Months enum. Now what is different?
  */
-
+// January start at 0 when '= 1' is removed.
 
 /*:
  - Experiment:
  Finish the rest of the months for our `Months` enum. Then take a look at `abbreviatedStringForm()` function. Complete this function so that it returns the abbreviated form of the desired month as a String. ie: calling `Months.January.abbreviatedStringForm()` returns "Jan".
  */
+let decemberMonth = Months.December.abbreviatedStringForm()
+
+print(decemberMonth)
 
 
 /*:
  - Experiment:
  Write a function within the enum that compares two months and determines how many months are they apart. For example: Comparing January to March would return to me '2', because January and March are two months apart.
  */
-
+let betweenJanAndOct = Months.January.compare(to: .October)
+print(betweenJanAndOct)
 
 /*:
  - Callout(Challenge):
  Create enums for the game "Rock, Paper, Scissors". Create a function within the enum that compares two hand shapes and determines the winner. Then create a function that returns ✋ , ✌️, or 👊 given rock, paper, or scissors.
-*/
+ */
+enum RockPaperSissors {
+  case rock
+  case paper
+  case sissors
+  
+  func getWinner(opponent: RockPaperSissors) {
+    switch self {
+    case .rock:
+      if opponent == .sissors {
+        print("You win")
+      } else if opponent == .paper {
+        print("You lose")
+      } else {
+        print("Tie")
+      }
+    case .paper:
+      if opponent == .rock {
+        print("You win")
+      } else if opponent == .sissors {
+        print("You lose")
+      } else {
+        print("Tie")
+      }
+    case .sissors:
+      if opponent == .paper {
+        print("You win")
+      } else if opponent == .rock {
+        print("You lose")
+      } else {
+        print("Tie")
+      }
+    }
+  }
+  
+  func emojify() -> String {
+    switch self {
+    case .rock:
+      return " 👊 "
+    case .paper:
+      return "✋"
+    default:
+      return "✌️"
+    }
+  }
+}
 
 
+var rpsGame = RockPaperSissors.rock
+rpsGame.getWinner(opponent: .paper)
+
+print( rpsGame.emojify() )
 //: [Next](@next)

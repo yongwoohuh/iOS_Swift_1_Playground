@@ -183,4 +183,25 @@ print(newString1)
  Create a closure with at least two parameters of your choice and decide whether or not it returns anything. Then create a function that takes in your closure as a parameter and one additional parameter of your choice.
  */
 //: [Next](@next)
+typealias TestClosureName = (Int, Int) -> Int
+func test(name: String, _ block: TestClosureName) {
+  let result = block(5, 5)
+  
+  print("\(name) has a result of \(result)")
+}
 
+test(name: "addition", {(a, b) -> Int in
+  return a + b
+})
+
+test(name: "subtraction", {(a, b) -> Int in
+  return a - b
+})
+
+test(name: "multiplication", {(a, b) -> Int in
+  return a * b
+})
+
+test(name: "division", {(a, b) -> Int in
+  return a / b;
+})
